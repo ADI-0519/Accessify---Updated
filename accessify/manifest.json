@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Accessify - Accessibility Helper",
+    "version": "1.0",
+    "description": "Enhances web accessibility with Dyslexia Mode, Color Blind Mode, and Text-to-Speech.",
+    "permissions": ["storage", "activeTab", "scripting"],
+    "host_permissions": ["<all_urls>"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
